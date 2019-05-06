@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <% include partials/head %>
+  </head>
+  <style>
+  body{
+    background:rgb(226, 226, 226);
+  }
+      .cuerpo{
+        width:100%;
+        height: 100vh;
+        background:rgb(226, 226, 226);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .contenedor{
+         width: 70%;
+         min-height:450px;
+         position: relative;
+         background:white;
+
+         display: grid;
+         grid-template-columns: 1fr 400px 1fr;
+         grid-template-rows: 50px 100px 20px 100px 20px 100px 20px 50px;
+
+      }
+      .titulologin{
+        text-align:center;
+        width: 200px;
+        height: 40px;
+        background: white;
+        position: absolute;
+        top: -40px;
+        padding: 10px;
+      }
+      .telefonologin{
+        border-bottom: solid 2px black;
+        text-align:center;
+        grid-column-start: 2 ;
+        grid-column-end: 3;
+        grid-row-start: 2 ;
+        grid-row-end: 3;
+      }
+      .googlelogin{
+        border-bottom: solid 2px black;
+        text-align:center;
+        grid-column-start: 2 ;
+        grid-column-end: 3;
+        grid-row-start: 4 ;
+        grid-row-end: 5;
+      }
+      .correologin{
+        text-align:center;
+        grid-column-start: 2 ;
+        grid-column-end: 3;
+        grid-row-start: 6 ;
+        grid-row-end: 7;
+      }
+      .s{
+        height:20px;
+        background:white;
+        border: 0;
+        border-bottom: 1px solid gray;
+      }
+      .btn{
+        height: 30px;
+        margin: 20px;
+      }
+  </style>
+  <body class="signup">
+  <% include partials/navigation %>
+  <div class="cuerpo">
+    <form action="/signup" method="post" class="contenedor"> 
+               <div class="titulologin">
+                   <h4>Registrarme</h4>
+               </div>
+               <div class="telefonologin">
+                 <h4>Teléfono</h4>
+               </div>
+               <div class="googlelogin">
+                 <h4>Google</h4>
+               </div>
+               <div class="correologin">
+                 <h4>Correo</h4>
+                 
+      <input type="email" name="email" class="form-control s">
+      <label for="password">Clave</label>
+      <input type="password" name="password" class="form-control s">
+      <input type="submit" class="btn btn-dark ">
+               </div>
+              <form>
+            
+  </div>
+    
+          
+           
+  </body>
+</html>
